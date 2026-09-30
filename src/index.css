@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Modern elevation tokens for flawless contrast */
+:root {
+  color-scheme: light;
+  --canvas-bg: #f8fafc;
+  --surface-card: #ffffff;
+  --surface-inset: #f1f5f9;
+  --surface-border: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+}
+
+html.dark, .dark {
+  color-scheme: dark;
+  --canvas-bg: #070b14;
+  --surface-card: #111a2e;
+  --surface-inset: #0c1221;
+  --surface-border: #1e2c47;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+}
+
+body {
+  background-color: var(--canvas-bg);
+  color: var(--text-primary);
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Card utilities with distinct borders and shadows */
+.card-surface {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+}
+
+.dark .card-surface,
+html.dark .card-surface {
+  background-color: #111a2e;
+  border-color: #21304d;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.45);
+}
+
+.subcard-surface {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.dark .subcard-surface,
+html.dark .subcard-surface {
+  background-color: #0b1120;
+  border-color: #1c2840;
+}
+
+/* Scrollbars */
+.dark ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #070b14;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #1e2c47;
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #33466a;
+}

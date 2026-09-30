@@ -1,0 +1,7 @@
+{
+  "name": "Lost & Found",
+  "description": "A centralized, modern platform to report, search, match, verify, and recover lost and found personal belongings with smart matching.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
